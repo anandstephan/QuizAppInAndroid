@@ -11,14 +11,16 @@
         android:theme="@style/Theme.QuizApp">
         <activity android:name=".AddQuestion"></activity>
         <activity android:name=".ShowCategory">
+
+        </activity>
+        <activity android:name=".AddCategory"></activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddCategory"></activity>
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
