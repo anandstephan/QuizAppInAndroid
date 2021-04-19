@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/teal_700"
+    tools:context=".AddCategory">
+<TextView
+    android:layout_marginTop="45dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@color/white"
+    android:text="Add CATEGORY"
+    android:textStyle="bold"
+    android:textAlignment="center"
+    android:textSize="55dp"/>
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:hint="Enter the Category Name"
+        android:id="@+id/categoryname"
+        android:textAlignment="center"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timing"
+        android:entries="@array/timings"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnaddcategory"
+        android:text="Add Category"/>
+</LinearLayout>
