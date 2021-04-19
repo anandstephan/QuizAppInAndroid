@@ -34,6 +34,11 @@
         android:layout_height="wrap_content"
         android:hint="Enter Your College Name"
         android:id="@+id/clg"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Password"
+        android:id="@+id/pass"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
