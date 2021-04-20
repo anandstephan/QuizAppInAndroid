@@ -6,16 +6,16 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="HOME"
-    android:textAlignment="center"
-    android:textSize="45dp"/>
-    <Button
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TAKE A Quiz"
-        android:textSize="25dp"
-        android:id="@+id/btn_quiz"/>
+        android:text="Show Category"
+        android:textAlignment="center"
+        android:textSize="45dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout1"/>
 </LinearLayout>
