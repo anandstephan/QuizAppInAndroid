@@ -4,49 +4,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="50dp"
+        android:background="@color/colorPrimaryDark">
 
-    <TextView
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:textColor="#FF4331"
+            android:text="Welcome to Quiz App"/>
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/quiz"/>
+    </LinearLayout>
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CREATE ACCOUNT"
-        android:textAlignment="center"
-        android:textSize="30dp"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter the First Name"
-        android:id="@+id/fname"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter the Last Name"
-        android:id="@+id/lname"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter the phone Number"
-        android:id="@+id/pno"/>
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <EditText
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_people_outline_black_24dp"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="FIRST NAME"
+                android:id="@+id/fname"/>
+            <EditText
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:hint="LAST NAME"
+                android:id="@+id/lname"/>
+            <EditText
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_phone_black_24dp"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="MOBILE NUMBER"
+                android:id="@+id/pno"/>
+            <EditText
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="COLLEGE NAME"
+                android:id="@+id/clg"/>
+            <EditText
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/info"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="PASSWORD"
+                android:id="@+id/pass"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_marginTop="40dp"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="SignUp"
+                    android:layout_marginHorizontal="30dp"
+                    android:background="@drawable/buttonstylepink"
+                    android:textColor="#ffff"
+                    android:id="@+id/signup"
+                    android:drawableRight="@drawable/ic_send_black_24dp"/>
+                <Button
+                    android:layout_marginTop="40dp"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:background="@drawable/buttonstylepink"
+                    android:textColor="#ffff"
+                    android:layout_marginHorizontal="30dp"
+                    android:id="@+id/login"
+                    android:drawableRight="@drawable/ic_send_black_24dp"/>
+            </LinearLayout>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Your College Name"
-        android:id="@+id/clg"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Your Password"
-        android:id="@+id/pass"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SIGNUP"
-        android:id="@+id/signup"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="LOGIN"
-        android:id="@+id/login"/>
+        </LinearLayout>
+    </ScrollView>
+
+
 </LinearLayout>

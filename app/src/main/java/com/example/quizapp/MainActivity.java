@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.quizapp.helperClasses.AddUser;
 import com.google.firebase.database.DatabaseReference;
@@ -37,6 +38,12 @@ public class MainActivity extends AppCompatActivity {
                 String key = myRef.push().getKey();
                 AddUser addUser = new AddUser(key,fname.getText().toString(),lname.getText().toString(),pno.getText().toString(),clgname.getText().toString(),fname.getText().toString()+password.getText().toString(),password.getText().toString());
                 myRef.child(key).setValue(addUser);
+                fname.setText("");
+                lname.setText("");
+                pno.setText("");
+                clgname.setText("");
+                password.setText("");
+                Toast.makeText(MainActivity.this, "User Added Successfully", Toast.LENGTH_SHORT).show();
             }
         });
         login.setOnClickListener(new View.OnClickListener() {

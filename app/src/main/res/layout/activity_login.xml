@@ -6,30 +6,57 @@
     android:layout_height="wrap_content"
     tools:context=".Login"
     android:orientation="vertical">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="LOGIN"
-    android:textSize="40dp"
-    android:textAlignment="center"/>
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/pno"
-        android:hint="Enter the Phone Number"
-        android:inputType="number"/>
-    <EditText
+        android:orientation="vertical"
+        android:padding="50dp"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="39sp"
+            android:textColor="#FF4331"
+            android:text="Login to Quiz App"/>
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/quiz"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/pass"
-        android:hint="Enter the Phone Number"
-        android:inputType="textVisiblePassword"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="LOGIN"
-        android:textSize="30dp"
-        android:id="@+id/login"
-        />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <EditText
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/ic_phone_black_24dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="PHONE"
+            android:id="@+id/pno"/>
+        <EditText
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="PASSWORD"
+            android:inputType="textPassword"
+            android:id="@+id/pass"/>
+        <Button
+            android:layout_marginTop="40dp"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:background="@drawable/buttonstylepink"
+            android:textColor="#ffff"
+            android:layout_marginHorizontal="30dp"
+            android:id="@+id/login"
+            android:drawableRight="@drawable/ic_send_black_24dp"/>
+    </LinearLayout>
+
 </LinearLayout>
