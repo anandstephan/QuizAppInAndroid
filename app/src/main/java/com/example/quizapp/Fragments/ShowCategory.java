@@ -63,6 +63,7 @@ public class ShowCategory extends Fragment {
     void makeButton(String btname, String id,View view) {
         LinearLayout ll = (LinearLayout) view.findViewById(R.id.layout1);
         ArrayList arrayList = new ArrayList();
+
         Button btn = new Button(getActivity());
         btn.setText("" + btname);
         btn.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));

@@ -5,6 +5,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -42,6 +44,7 @@ public class DisplayQuestion extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        ArrayList rightanswer = new ArrayList();
         for(int i=0;i<al.size();i++) {
             DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("questions");
             mDatabase.orderByChild("id").equalTo(""+al.get(i)).addValueEventListener(new ValueEventListener() {
@@ -51,6 +54,7 @@ public class DisplayQuestion extends Fragment {
                     for(DataSnapshot dataSnapshot1 : snapshot.getChildren()){
                         AddQuestion addQuestion = dataSnapshot1.getValue(AddQuestion.class);
                         showQuestion(addQuestion,view);
+                        rightanswer.add(addQuestion.getRightanswer());
                     }
                 }
 
@@ -62,6 +66,31 @@ public class DisplayQuestion extends Fragment {
 
         }
 
+        Button btnsubmit = view.findViewById(R.id.submit);
+        ArrayList selectedanswer = new ArrayList();
+        btnsubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                LinearLayout ll = view.findViewById(R.id.layout1);
+
+            for(int i=0;i<ll.getChildCount();i++){
+                View element = ll.getChildAt(i);
+                                if(element instanceof RadioGroup) {
+                                    int radioButtonID = ((RadioGroup) element).getCheckedRadioButtonId();
+                                    RadioButton radioButton = (RadioButton) element.findViewById(radioButtonID);
+                                    String selectedtext = (String) radioButton.getText();
+                                    selectedanswer.add(selectedtext);
+                                }
+            }
+            int score=0;
+            for(int i=0;i<rightanswer.size();i++){
+                if(rightanswer.get(i).equals(selectedanswer.get(i))){
+                    score++;//update this score on user tree
+                }
+            }
+                Toast.makeText(getActivity(), "Score"+score, Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
     void showQuestion(AddQuestion addQuestion,View view){
@@ -86,5 +115,6 @@ public class DisplayQuestion extends Fragment {
 
         ll.addView(tv);
         ll.addView(radioGroup);
+
     }
 }
