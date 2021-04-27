@@ -10,11 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Show Category"
+        android:textColor="@color/purple_500"
         android:textAlignment="center"
         android:textSize="45dp"/>
 
     <LinearLayout
         android:orientation="vertical"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/layout1"/>

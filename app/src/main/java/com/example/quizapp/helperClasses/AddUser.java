@@ -1,7 +1,7 @@
 package com.example.quizapp.helperClasses;
 
 public class AddUser {
-    String id,fname,lname,pno,clg,nameAndPassword,password;
+    public String id,fname,lname,pno,clg,nameAndPassword,password;
 
     public AddUser(String id, String fname, String lname, String pno, String clg,String nameAndPassword,String password) {
         this.id = id;
@@ -15,22 +15,7 @@ public class AddUser {
 
     public AddUser(){
 
-    }
 
-    public String getNameAndPassword() {
-        return nameAndPassword;
-    }
-
-    public void setNameAndPassword(String nameAndPassword) {
-        this.nameAndPassword = nameAndPassword;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getId() {
@@ -71,5 +56,21 @@ public class AddUser {
 
     public void setClg(String clg) {
         this.clg = clg;
+    }
+
+    public String getNameAndPassword() {
+        return nameAndPassword;
+    }
+
+    public void setNameAndPassword(String nameAndPassword) {
+        this.nameAndPassword = nameAndPassword;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

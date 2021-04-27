@@ -10,7 +10,8 @@ import android.widget.EditText;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class AddCategory extends AppCompatActivity {
+public class
+AddCategory extends AppCompatActivity {
     EditText categoryname,totalmarks,totalquestion;
     Button btn_add_category;
     @Override

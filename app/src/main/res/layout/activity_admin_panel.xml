@@ -5,37 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black"
-    tools:context=".AddCategory">
+    tools:context=".AdminPanel"
+    android:background="@color/black">
 <TextView
-    android:layout_marginTop="45dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textColor="@color/purple_500"
-    android:text="Add CATEGORY"
-    android:textStyle="bold"
-    android:textAlignment="center"
-    android:textSize="55dp"/>
-    <EditText
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:textColorHint="@color/purple_500"
-        android:textColor="@color/purple_500"
-        android:hint="Enter the Category Name"
-        android:id="@+id/categoryname"
-        android:textAlignment="center"/>
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/timing"
-        android:entries="@array/timings"
-        />
+    android:text="Admin Functionality"
+    android:textSize="38dp"
+    android:textAlignment="center"/>
     <Button
+        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnaddcategory"
-        android:text="Add Category"/>
+        android:textColor="@color/white"
+        android:text="Add Category"
+        android:textSize="30dp"
+        android:id="@+id/addcatgory"/>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Add Question"
+        android:textSize="30dp"
+        android:id="@+id/addquestion"/>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Show Category"
+        android:textSize="30dp"
+        android:id="@+id/showcategory"/>
 </LinearLayout>

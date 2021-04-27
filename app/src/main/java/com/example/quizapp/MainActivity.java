@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = database.getReference("users");
                 String key = myRef.push().getKey();
-                AddUser addUser = new AddUser(key,fname.getText().toString(),lname.getText().toString(),pno.getText().toString(),clgname.getText().toString(),fname.getText().toString()+password.getText().toString(),password.getText().toString());
+                AddUser addUser = new AddUser(key,fname.getText().toString(),lname.getText().toString(),pno.getText().toString(),clgname.getText().toString(),pno.getText().toString()+password.getText().toString(),password.getText().toString());
                 myRef.child(key).setValue(addUser);
                 fname.setText("");
                 lname.setText("");

@@ -13,7 +13,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.quizapp.Fragments.ContactUs;
+import com.example.quizapp.Fragments.FAQ;
 import com.example.quizapp.Fragments.Home;
+import com.example.quizapp.Fragments.Logout;
+import com.example.quizapp.Fragments.Result;
 import com.google.android.material.navigation.NavigationView;
 
 public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -62,9 +65,6 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -82,9 +82,15 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
             case R.id.nav_contactus:
                 fragment = new ContactUs();
                 break;
-//            case R.id.nav_menu3:
-//                fragment = new Menu3();
-//                break;
+            case R.id.nav_logout:
+                fragment = new Logout();
+                break;
+            case R.id.nav_result:
+                fragment = new Result();
+                break;
+            case R.id.nav_faq:
+                fragment = new FAQ();
+                break;
         }
 
         //replacing the fragment

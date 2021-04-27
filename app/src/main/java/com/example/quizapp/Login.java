@@ -3,12 +3,17 @@ package com.example.quizapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.quizapp.helperClasses.AddUser;
+import com.example.quizapp.helperClasses.SharedData;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -19,6 +24,7 @@ public class Login extends AppCompatActivity {
 
     EditText pno,password;
     Button btnlgn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +32,10 @@ public class Login extends AppCompatActivity {
         pno = findViewById(R.id.pno);
         password = findViewById(R.id.pass);
         btnlgn = findViewById(R.id.login);
+        if(!SharedData.getShareData(getApplicationContext()).equals("false")){
+            Intent in = new Intent(getApplicationContext(),Dashboard.class);
+            startActivity(in);
+        }
         btnlgn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,9 +44,21 @@ public class Login extends AppCompatActivity {
                 myRef.orderByChild("nameAndPassword").equalTo(pno.getText().toString()+password.getText().toString()).addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        Toast.makeText(Login.this, "child count"+snapshot.getChildrenCount(), Toast.LENGTH_SHORT).show();
+                        String id="";
+                        for (DataSnapshot snapshot1: snapshot.getChildren()){
+                            id = snapshot1.getValue(AddUser.class).getId();
+                        }
                         if(snapshot.getChildrenCount() == 1) {
                             Toast.makeText(Login.this, "Login Suceess", Toast.LENGTH_SHORT).show();
+                            SharedData.savedSharedData(getApplicationContext(),id);
+                            Toast.makeText(Login.this, "------->>"+id.equals("-MZHMxUSKl5fVMWCqZpX"), Toast.LENGTH_SHORT).show();
+                            if(id.equals("-MZHMxUSKl5fVMWCqZpX")){
+                                Intent in = new Intent(getApplicationContext(), AdminPanel.class);
+                                startActivity(in);
+                            }else {
+                                Intent in = new Intent(getApplicationContext(), Dashboard.class);
+                                startActivity(in);
+                            }
                         }else{
                             Toast.makeText(Login.this, "Login Fail", Toast.LENGTH_SHORT).show();
                         }
@@ -49,4 +71,5 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
 }

@@ -9,22 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizApp">
+        <activity android:name=".AdminPanel"></activity>
         <activity
             android:name=".Dashboard"
             android:label="@string/title_activity_dashboard"
-            android:theme="@style/Theme.QuizApp.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.QuizApp.NoActionBar"></activity>
         <activity android:name=".Login" />
         <activity android:name=".AddQuestion" />
         <activity android:name=".ShowCategory" />
         <activity android:name=".AddCategory" />
         <activity android:name=".MainActivity">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

@@ -13,6 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -61,13 +62,27 @@ public class ShowCategory extends Fragment {
 
 
     void makeButton(String btname, String id,View view) {
-        LinearLayout ll = (LinearLayout) view.findViewById(R.id.layout1);
+        LinearLayout ll =  view.findViewById(R.id.layout1);
         ArrayList arrayList = new ArrayList();
-
+        CardView cardView = new CardView(getActivity());
         Button btn = new Button(getActivity());
         btn.setText("" + btname);
-        btn.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        ll.addView(btn);
+        LinearLayout.LayoutParams btnLayoutsParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+//        btnLayoutsParams.setMargins(30,40,30,40);`
+        btn.setLayoutParams(btnLayoutsParams);
+        ll.setGravity(20);
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+
+        cardView.setLayoutParams(params);
+        cardView.setContentPadding(2, 1, 2, 1);
+        cardView.setMaxCardElevation(5);
+        cardView.setCardElevation(9);
+        cardView.setRadius(20);
+        cardView.setBackgroundResource(R.drawable.buttonstylepink);
+//        cardView.setPadding(20,20,20,20);
+        cardView.addView(btn);
+        ll.addView(cardView);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view2) {

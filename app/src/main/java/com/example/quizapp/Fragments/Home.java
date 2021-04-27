@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,7 +35,6 @@ public class Home extends Fragment {
             public void onClick(View view) {
                 FragmentManager fm = getParentFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-//                 ContactUs contactUs = new ContactUs();
                 ShowCategory showCategory = new ShowCategory();
                 ft.replace(R.id.content_frame, showCategory);
                 ft.commit();

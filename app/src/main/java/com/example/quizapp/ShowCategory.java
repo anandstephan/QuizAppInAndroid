@@ -45,8 +45,7 @@ public class ShowCategory extends AppCompatActivity {
     }
 
     void makeButton(String btname,String id){
-        LinearLayout ll = (LinearLayout)findViewById(R.id.layout);
-
+        LinearLayout ll = findViewById(R.id.layout);
         Button btn = new Button(this);
         btn.setText(""+btname);
         btn.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));

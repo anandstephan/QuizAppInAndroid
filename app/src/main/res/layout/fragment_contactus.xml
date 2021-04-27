@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Contact Us"
+        android:textColor="@color/purple_500"
         android:textAlignment="center"
         android:textSize="45dp"/>
 </LinearLayout>
