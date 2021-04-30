@@ -24,5 +24,12 @@ public class AdminPanel extends AppCompatActivity {
                 startActivity(in);
             }
         });
+        showcategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(getApplicationContext(),ShowCategory.class);
+                startActivity(in);
+            }
+        });
     }
 }

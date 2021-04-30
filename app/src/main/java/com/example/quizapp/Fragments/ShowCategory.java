@@ -1,6 +1,7 @@
 package com.example.quizapp.Fragments;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -64,25 +65,14 @@ public class ShowCategory extends Fragment {
     void makeButton(String btname, String id,View view) {
         LinearLayout ll =  view.findViewById(R.id.layout1);
         ArrayList arrayList = new ArrayList();
-        CardView cardView = new CardView(getActivity());
         Button btn = new Button(getActivity());
-        btn.setText("" + btname);
-        LinearLayout.LayoutParams btnLayoutsParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-//        btnLayoutsParams.setMargins(30,40,30,40);`
-        btn.setLayoutParams(btnLayoutsParams);
-        ll.setGravity(20);
-
+        btn.setText(""+btname);
+        btn.setBackgroundResource(R.color.purple_500);
+        btn.setTextColor(Color.parseColor("#FFFFFF"));
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-
-        cardView.setLayoutParams(params);
-        cardView.setContentPadding(2, 1, 2, 1);
-        cardView.setMaxCardElevation(5);
-        cardView.setCardElevation(9);
-        cardView.setRadius(20);
-        cardView.setBackgroundResource(R.drawable.buttonstylepink);
-//        cardView.setPadding(20,20,20,20);
-        cardView.addView(btn);
-        ll.addView(cardView);
+        params.setMargins(0,40,0,0);
+        btn.setLayoutParams(params);
+        ll.addView(btn);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view2) {

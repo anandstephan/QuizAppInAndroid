@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -19,8 +20,8 @@ AddCategory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_category);
         categoryname = findViewById(R.id.categoryname);
-//        totalmarks = findViewById(R.id.totalmarks);
-//        totalquestion = findViewById(R.id.totalquestion);
+        totalmarks = findViewById(R.id.totalmarks);
+        totalquestion = findViewById(R.id.totalquestion);
         btn_add_category = findViewById(R.id.btnaddcategory);
         btn_add_category.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +32,10 @@ AddCategory extends AppCompatActivity {
                 String key = myRef.push().getKey();
                 com.example.quizapp.helperClasses.AddCategory addCategory = new com.example.quizapp.helperClasses.AddCategory(key,categoryname.getText().toString(),totalmarks.getText().toString(),totalquestion.getText().toString());
                 myRef.child(key).setValue(addCategory);
+                Toast.makeText(AddCategory.this, "Category Added Successfully", Toast.LENGTH_SHORT).show();
+                categoryname.setText("");
+                totalmarks.setText("");
+                totalquestion.setText("");
             }
 
         });

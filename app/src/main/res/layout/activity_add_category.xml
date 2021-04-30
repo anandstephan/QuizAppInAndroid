@@ -26,7 +26,28 @@
         android:hint="Enter the Category Name"
         android:id="@+id/categoryname"
         android:textAlignment="center"/>
-
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColorHint="@color/purple_500"
+        android:textColor="@color/purple_500"
+        android:hint="Enter the Total Marks"
+        android:inputType="number"
+        android:id="@+id/totalmarks"
+        android:textAlignment="center"/>
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColorHint="@color/purple_500"
+        android:textColor="@color/purple_500"
+        android:hint="Enter the Number of Question"
+        android:inputType="number"
+        android:id="@+id/totalquestion"
+        android:textAlignment="center"/>
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -3,6 +3,7 @@ package com.example.quizapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -48,7 +49,11 @@ public class ShowCategory extends AppCompatActivity {
         LinearLayout ll = findViewById(R.id.layout);
         Button btn = new Button(this);
         btn.setText(""+btname);
-        btn.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        btn.setBackgroundResource(R.color.purple_500);
+        btn.setTextColor(Color.parseColor("#FFFFFF"));
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        params.setMargins(0,40,0,0);
+        btn.setLayoutParams(params);
         ll.addView(btn);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
