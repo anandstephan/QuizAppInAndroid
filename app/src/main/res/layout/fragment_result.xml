@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/black">
+    android:background="@color/white">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,21 +12,84 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="40dp"
             android:text="Your  Score"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/orange"
             android:textAlignment="center"/>
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pbresult"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/result"
+            android:id="@+id/score"
+            android:textColor="@color/orange"
             android:textSize="40dp"
-            android:textColor="@color/purple_500"
             android:textAlignment="center"/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number of Right Attempt Question"
+                android:textColorHint="@color/orange"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/attempt"
+                android:textColor="@color/orange"
+                android:textSize="20dp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Wrong Question"
+                android:textColorHint="@color/orange"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/wrongattempt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:textSize="20dp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Attempt Question"
+                android:textColorHint="@color/orange"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/notattempt"
+                android:textColor="@color/orange"
+                android:textColorHint="@color/orange"
+                android:textSize="32dp"/>
+        </TableRow>
+        </TableLayout>
     </LinearLayout>
 
 </LinearLayout>

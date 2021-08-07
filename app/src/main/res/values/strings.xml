@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QuizApp</string>
+    <string name="app_name"> Online Quiz System</string>
     <string-array name="timings">
         <item>30 min</item>
         <item>45 min</item>

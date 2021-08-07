@@ -30,9 +30,13 @@ AddCategory extends AppCompatActivity {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = database.getReference("categories");
                 String key = myRef.push().getKey();
-                com.example.quizapp.helperClasses.AddCategory addCategory = new com.example.quizapp.helperClasses.AddCategory(key,categoryname.getText().toString(),totalmarks.getText().toString(),totalquestion.getText().toString());
+                int totalmarks1 = Integer.parseInt(totalmarks.getText().toString());
+                int totalquestion1 = Integer.parseInt(totalquestion.getText().toString());
+                double perquestionmark = (double)totalmarks1/totalquestion1;
+
+                com.example.quizapp.helperClasses.AddCategory addCategory = new com.example.quizapp.helperClasses.AddCategory(key,categoryname.getText().toString(),totalmarks.getText().toString(),totalquestion.getText().toString(),perquestionmark);
                 myRef.child(key).setValue(addCategory);
-                Toast.makeText(AddCategory.this, "Category Added Successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddCategory.this, "Category Added Successfully"+perquestionmark, Toast.LENGTH_SHORT).show();
                 categoryname.setText("");
                 totalmarks.setText("");
                 totalquestion.setText("");

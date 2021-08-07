@@ -11,14 +11,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="50dp"
-        android:background="@color/colorPrimaryDark">
+        android:background="@color/white">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30sp"
             android:layout_gravity="center"
-            android:textColor="#FF4331"
+            android:textColor="@color/orange"
             android:text="Welcome to Quiz App"/>
         <ImageView
             android:layout_marginTop="30dp"

@@ -1,17 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Display Question"
+        android:text="Quiz Start"
+        android:textColor="@color/orange"
         android:textAlignment="center"
         android:textSize="45dp"/>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dispquestion"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timer"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:text="40:00"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -29,5 +46,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/submit"
         android:text="Submit"
+        android:textColor="@color/white"
+        android:background="@color/orange"
         android:textSize="30dp"/>
 </LinearLayout>
+</ScrollView>

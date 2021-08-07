@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".AdminPanel"
-    android:background="@color/black">
+    android:background="@color/white">
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textColor="@color/purple_500"
+    android:textColor="@color/orange"
     android:text="Admin Functionality"
     android:textSize="38dp"
     android:textAlignment="center"/>
@@ -19,25 +19,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
+        android:background="@color/orange"
         android:text="Add Category"
         android:textSize="30dp"
         android:id="@+id/addcatgory"/>
 
-    <Button
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="Add Question"
-        android:textSize="30dp"
-        android:id="@+id/addquestion"/>
 
     <Button
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
+        android:background="@color/orange"
         android:text="Show Category"
         android:textSize="30dp"
         android:id="@+id/showcategory"/>
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/orange"
+        android:text="Start Quiz"
+        android:textSize="30dp"
+        android:id="@+id/startquiz"/>
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/logout"
+        android:text="LOGOUT"
+        android:textColor="@color/white"
+        android:background="@color/orange"
+        android:textSize="30dp"/>
 </LinearLayout>

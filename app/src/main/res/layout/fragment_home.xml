@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="WELCOME"
-    android:textColor="#E21717"
+    android:textColor="@color/orange"
     android:textAlignment="center"
     android:textSize="45dp"/>
     <ImageView

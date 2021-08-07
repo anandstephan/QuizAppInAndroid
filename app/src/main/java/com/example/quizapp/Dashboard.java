@@ -3,6 +3,7 @@
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,10 +45,13 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
+            Toast.makeText(this, "somenew", Toast.LENGTH_SHORT).show();
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            Toast.makeText(this, "Please Use Navigation Controls", Toast.LENGTH_SHORT).show();
+//            super.onBackPressed();
         }
+
     }
 
     @Override
@@ -79,9 +83,9 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
             case R.id.nav_home:
                 fragment = new Home();
                 break;
-            case R.id.nav_contactus:
-                fragment = new ContactUs();
-                break;
+//            case R.id.nav_contactus:
+//                fragment = new ContactUs();
+//                break;
             case R.id.nav_logout:
                 fragment = new Logout();
                 break;
@@ -114,4 +118,5 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         //make this method blank
         return true;
     }
+
 }

@@ -20,12 +20,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class AddQuestion extends AppCompatActivity {
-
+    int count=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_question);
         String id = getIntent().getStringExtra("id");
+        String totalquestion = getIntent().getStringExtra("totalquestion");
+        final int finaltotalquestion = Integer.parseInt(totalquestion);
+
         Toast.makeText(this, ""+id, Toast.LENGTH_SHORT).show();
         DatabaseReference mDatabase =FirebaseDatabase.getInstance().getReference("questions");
         EditText question,option1,option2,option3,option4,rightanswer,marks;
@@ -36,22 +39,26 @@ public class AddQuestion extends AppCompatActivity {
         option3 = findViewById(R.id.option3);
         option4 = findViewById(R.id.option4);
         rightanswer = findViewById(R.id.rightanswer);
-        marks = findViewById(R.id.marks);
         btnsumbit =  findViewById(R.id.btnsubmit);
         btnsumbit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                com.example.quizapp.helperClasses.AddQuestion addQuestion = new com.example.quizapp.helperClasses.AddQuestion(id,question.getText().toString(),option1.getText().toString(),option2.getText().toString(),option3.getText().toString(),option4.getText().toString(),rightanswer.getText().toString(),marks.getText().toString());
-                String key = mDatabase.push().getKey();
-                mDatabase.child(key).setValue(addQuestion);
-                Toast.makeText(AddQuestion.this, "Question Added Successfully", Toast.LENGTH_SHORT).show();
-                question.setText("");
-                option1.setText("");
-                option3.setText("");
-                option2.setText("");
-                option4.setText("");
-                rightanswer.setText("");
-
+                Log.d("chaman",""+finaltotalquestion);
+                if(count<finaltotalquestion) {
+                    com.example.quizapp.helperClasses.AddQuestion addQuestion = new com.example.quizapp.helperClasses.AddQuestion(id, question.getText().toString(), option1.getText().toString(), option2.getText().toString(), option3.getText().toString(), option4.getText().toString(), rightanswer.getText().toString());
+                    String key = mDatabase.push().getKey();
+                    mDatabase.child(key).setValue(addQuestion);
+                    Toast.makeText(AddQuestion.this, "Question Added Successfully"+finaltotalquestion, Toast.LENGTH_SHORT).show();
+                    question.setText("");
+                    option1.setText("");
+                    option3.setText("");
+                    option2.setText("");
+                    option4.setText("");
+                    rightanswer.setText("");
+                    count++;
+                }else{
+                    Toast.makeText(AddQuestion.this, "You are not add more question", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 //        mDatabase.orderByChild("id").equalTo(id).addValueEventListener(new ValueEventListener() {

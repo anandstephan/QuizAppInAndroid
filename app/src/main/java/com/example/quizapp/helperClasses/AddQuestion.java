@@ -1,12 +1,12 @@
 package com.example.quizapp.helperClasses;
 
 public class AddQuestion {
-    String id,question,option1,option2,option3,option4,rightanswer,number;
+    String id,question,option1,option2,option3,option4,rightanswer;
 
     public AddQuestion() {
     }
 
-    public AddQuestion(String id, String question, String option1, String option2, String option3, String option4, String rightanswer,String number) {
+    public AddQuestion(String id, String question, String option1, String option2, String option3, String option4, String rightanswer) {
         this.id = id;
         this.question = question;
         this.option1 = option1;
@@ -14,15 +14,6 @@ public class AddQuestion {
         this.option3 = option3;
         this.option4 = option4;
         this.rightanswer = rightanswer;
-        this.number = number;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
     }
 
     public String getId() {

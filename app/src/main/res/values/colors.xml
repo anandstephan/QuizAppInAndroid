@@ -5,10 +5,10 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
+    <color name="black">#FFF</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimaryDark">#FFF</color>
     <color name="colorAccent">#FF4081</color>
     <color name="pink">#fe104d</color>
     <color name="yellow">#FFFF33</color>
@@ -18,4 +18,5 @@
     <color name="color_green_light">#5ff0f7</color>
     <color name="color_white">#fff</color>
     <color name="cardview_color1">#fc7f03</color>
+    <color name="orange">#FFA500</color>
 </resources>

@@ -43,12 +43,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/rightanswer"
         android:hint="Enter the Right Answer"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/marks"
-        android:inputType="number"
-        android:hint="Enter the Marks"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

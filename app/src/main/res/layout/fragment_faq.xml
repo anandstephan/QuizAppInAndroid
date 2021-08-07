@@ -15,21 +15,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="FAQ's"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/orange"
         android:textAlignment="center"
         android:textSize="45dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" Write clear and concise pages."
-        android:textColor="@color/purple_500"
+        android:textColor="@color/orange"
         android:textAlignment="textStart"
         android:textSize="35dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="In terms of FAQ pages, the more the merrier is actually a fallacy. Too much text can end up being too confusing, causing readers to have to search for the answer they need."
-        android:textColor="@color/purple_500"
+        android:textColor="@color/orange"
         android:textAlignment="textStart"
         android:textSize="25dp"
         />
@@ -37,14 +37,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" Write clear and concise pages."
-        android:textColor="@color/purple_500"
+        android:textColor="@color/orange"
         android:textAlignment="textStart"
         android:textSize="35dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="In terms of FAQ pages, the more the merrier is actually a fallacy. Too much text can end up being too confusing, causing readers to have to search for the answer they need."
-        android:textColor="@color/purple_500"
+        android:textColor="@color/orange"
         android:textAlignment="textStart"
         android:textSize="25dp"
         />
@@ -52,14 +52,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" Write clear and concise pages."
-        android:textColor="@color/purple_500"
+        android:textColor="@color/orange"
         android:textAlignment="textStart"
         android:textSize="35dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="In terms of FAQ pages, the more the merrier is actually a fallacy. Too much text can end up being too confusing, causing readers to have to search for the answer they need."
-        android:textColor="@color/purple_500"
+        android:textColor="@color/orange"
         android:textAlignment="textStart"
         android:textSize="25dp"
         />

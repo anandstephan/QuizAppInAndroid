@@ -3,16 +3,27 @@ package com.example.quizapp.helperClasses;
 public class AddCategory {
 
     String categoryname,totalmarks,totalquestion,id;
+    double perquestionmark;
+    Boolean quizstatus;
 
     public AddCategory(){
 
     }
 
-    public AddCategory(String id,String categoryname, String totalmarks, String totalquestion) {
+    public AddCategory(String id,String categoryname, String totalmarks, String totalquestion,double perquestionmark) {
         this.categoryname = categoryname;
         this.totalmarks = totalmarks;
         this.totalquestion = totalquestion;
         this.id = id;
+        this.perquestionmark = perquestionmark;
+    }
+
+    public Boolean getQuizstatus() {
+        return quizstatus;
+    }
+
+    public void setQuizstatus(Boolean quizstatus) {
+        this.quizstatus = quizstatus;
     }
 
     public String getId() {
@@ -45,5 +56,13 @@ public class AddCategory {
 
     public void setTotalquestion(String totalquestion) {
         this.totalquestion = totalquestion;
+    }
+
+    public double getPerquestionmark() {
+        return perquestionmark;
+    }
+
+    public void setPerquestionmark(double perquestionmark) {
+        this.perquestionmark = perquestionmark;
     }
 }

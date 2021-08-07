@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.quizapp.helperClasses.AddCategory;
 import com.google.firebase.database.DataSnapshot;
@@ -18,17 +19,20 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class ShowCategory extends AppCompatActivity {
+import java.util.HashMap;
 
+public class StartQuiz extends AppCompatActivity {
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("categories");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show_category);
+        setContentView(R.layout.activity_start_quiz);
         ProgressBar pbshow = findViewById(R.id.pbshow);
         // Read from the database
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("categories");
-        myRef.addValueEventListener(new ValueEventListener() {
+
+        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
@@ -61,10 +65,14 @@ public class ShowCategory extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(ShowCategory.this,AddQuestion.class);
-                in.putExtra("id",id);
-                in.putExtra("totalquestion",totalquestion);
-                startActivity(in);
+//                Intent in = new Intent(StartQuiz.this,AddQuestion.class);
+//                in.putExtra("id",id);
+//                in.putExtra("totalquestion",totalquestion);
+//                startActivity(in);
+                HashMap<String,Object> result = new HashMap<>();
+                result.put("quizstatus",true);
+                myRef.child(id).updateChildren(result);
+                Toast.makeText(StartQuiz.this, "Quiz Started from the user Side", Toast.LENGTH_SHORT).show();
             }
         });
     }

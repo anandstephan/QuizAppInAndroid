@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black"
+    android:background="@color/white"
     tools:context=".AddCategory">
 <TextView
     android:layout_marginTop="45dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textColor="@color/purple_500"
+    android:textColor="@color/orange"
     android:text="Add CATEGORY"
     android:textStyle="bold"
     android:textAlignment="center"
@@ -21,8 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30dp"
-        android:textColorHint="@color/purple_500"
-        android:textColor="@color/purple_500"
+        android:textColorHint="@color/orange"
+        android:textColor="@color/orange"
         android:hint="Enter the Category Name"
         android:id="@+id/categoryname"
         android:textAlignment="center"/>
@@ -31,8 +31,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30dp"
-        android:textColorHint="@color/purple_500"
-        android:textColor="@color/purple_500"
+        android:textColorHint="@color/orange"
+        android:textColor="@color/orange"
         android:hint="Enter the Total Marks"
         android:inputType="number"
         android:id="@+id/totalmarks"
@@ -42,21 +42,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30dp"
-        android:textColorHint="@color/purple_500"
-        android:textColor="@color/purple_500"
+        android:textColorHint="@color/orange"
+        android:textColor="@color/orange"
         android:hint="Enter the Number of Question"
         android:inputType="number"
         android:id="@+id/totalquestion"
         android:textAlignment="center"/>
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/timing"
-        android:entries="@array/timings"
-        />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnaddcategory"
-        android:text="Add Category"/>
+        android:text="Add Category"
+        android:background="@color/orange"
+        android:textColor="@color/white"/>
 </LinearLayout>

@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShowCategory"
+    tools:context=".StartQuiz"
     android:orientation="vertical"
     android:background="@color/white">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textSize="40dp"
-    android:textColor="@color/orange"
-    android:text="Add Question"
-    android:textAlignment="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:textColor="@color/orange"
+        android:text="Start Quiz"
+        android:textAlignment="center"/>
     <ProgressBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
